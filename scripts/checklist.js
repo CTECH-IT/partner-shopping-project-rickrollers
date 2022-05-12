@@ -69,4 +69,4 @@
 
     App.CheckList = CheckList;
     window.App = App;
-})(window);
+})(window); 
