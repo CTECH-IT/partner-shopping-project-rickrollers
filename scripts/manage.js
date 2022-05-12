@@ -26,26 +26,17 @@
 
     // get all the data from the remote data store and put it in the truck and on the checklist
     remoteDS.getAll(function (orders) {
-
-        // go through the orders with a loop
-        // figure out if this order belongs to you, 
-        // if it does, add it to the checklist
-
         Object.entries(orders).forEach((entry) => {
-
             let validOrder = false; // check to see if it's mine
-
             const [key, value] = entry;
             console.log(`got order: ** ${key}: ${value} **`);
             Object.entries(value).forEach((field) => {
                 const [k, v] = field;
                 console.log(`----- ${k}: ${v}`);
-
                 if (v == 'KN') {
                     validOrder = true;
                 }
             });
-
             if (validOrder == true) {
                 checkList.addRow.call(checkList, value); // don't add rows now, since we moved the checklist to the manager page.
             }
