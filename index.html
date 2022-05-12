@@ -1,26 +1,88 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <meta charset="utf-8">
-    <title>My Awesome Website</title>
-    <meta name="author" content="Put your name here">
-    
-    <!-- If you are using p5.js to create drawings or games, uncomment the next line: -->
-    <!--
-      <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-    -->
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Keyboards</title>
+  <meta name="author" content="Kevin Nguyen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css ">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="stylesheets/styles.css">
 
-<body>
+</head>
+
+<body class="container">
   <header>
-    <h1 class="page-title">My Awesome Website</h1>
-    <p>This is some awesome text.</p>
+    <h1>Keyboards</h1>
   </header>
+  <div class="card card-default">
+    <div class="card-body">
+      <form data-keyboard-order="form">
+        <div class="form-group">
+          <label>KeyBoards</label>
+        </div> Please pick one from below:
 
+        <div class="checklist">
+          <input type="checkbox" id="keyboardOrder" name="Huntsman Mini [White]">
+          <label for="Huntsman Mini [White]">Huntsman Mini [White]</label>
+          <img src="photos\Keyboards/huntmanwhite.jpg" width="300" height="300">
+          <div>
+            <input type="checkbox" id="keyboardOrder" name="Logitech Wireless">
+            <label for="Logitech Wireless">Logitech Wireless</label>
+            <img src="photos\Keyboards/tech.jpg" width="230" height="110">
+          </div>
+          <div>
+            <input type="checkbox" id="keyboardOrder" name="RGB Mechanical Keyboard [Black]">
+            <label for="RGB Mechanical Keyboard [Black]"> RGB Mechanical Keyboard [Black] </label>
+            <img src="photos\Keyboards/mech.jpg" width="200" height="170">
+          </div>
+          <div class="form-group">
+            <label for="Amount">Amount</label>
+            <select id="Amount" class="form-control" name="Amount">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value=""
+              placeholder="user@company.com">
+          </div>
+
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+      </form>
+    </div>
+  </div>
+
+  <body>
+
+  </body>
+
+  <!-- the checklist-->
+  <div class="card card-default"></div>
+  <div class="card-body">
+    <h4> Pending Orders:</h4>
+    <div data-keyboard-order="checklist">
+    </div>
+  </div>
+  </div>
+
+  </section>
+
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script src="scripts/validation.js" charset="utf-8"></script>
+  <script src="scripts/checklist.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/truck.js" charset="utf-8"></script>
   <script src="scripts/main.js"></script>
 </body>
+
 </html>
