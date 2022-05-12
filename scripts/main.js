@@ -1,4 +1,4 @@
-(function(window) {
+(function (window) {
     'use strict';
 
     const FORM_SELECTOR = '[data-keyboard-order="form"]'
@@ -21,21 +21,22 @@
 
     window.myTruck = myTruck;
 
-    //find the form that is being submitted and create a formHander object
+    // find the form that is being submitted and create a FormHandler object
     let formHandler = new FormHandler(FORM_SELECTOR);
-    //find the checklist that is being updated and create a ChekList obkect
-    let checkList = new CheckList(CHECKLIST_SELECTOR);
-    //when a checkbox is clicked call "deliverOrder" on myTruck
-    checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
+    // MP find the checklist that is being updated and create a CheckList object
+     let checkList = new CheckList(CHECKLIST_SELECTOR);
 
-    //when the submit button is called, create the order and add a checkbox
+    // MP when a checkbox is clicked, call "deliverOrder" on myTruck
+     checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
+    
+    // when the submit button is called, create the order and add a checkbox
     formHandler.addSubmitHandler(function (data) {
         myTruck.createOrder.call(myTruck, data);
         checkList.addRow.call(checkList, data);
     });
+    // add the emaill validator to the email input field
+    formHandler.addInputHandler(Validation.isCompanyEmail);
 
-// add the emaill validator to the email input field
-formHandler.addInputHandler(Validation.isCompanyEmail);
 
 })(window);
 

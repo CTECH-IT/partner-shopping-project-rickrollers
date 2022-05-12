@@ -17,27 +17,29 @@
         }
     }
 
-    //Add an event handler for the Submit button and pass in creatOrder as a prarameter(func)
+    
     FormHandler.prototype.addSubmitHandler = function (func) {
-        console.log('Setting the submit handler for the form...');
+        console.log('Setting submit handler for form');
         this.$formElement.on('submit', function (event) {
             event.preventDefault();
 
-            //copy all the info from the form fields into the variable called data
+            // get the data from the form and store it in a data object
             let data = {};
             $(this).serializeArray().forEach(function (item) {
                 data[item.name] = item.value;
                 console.log(item.name + ' is ' + item.value);
             });
 
-            console.log(data);
-            func(data); //call the function that was passed in on the data form
+            data['mycode'] = 'KN'; // add a special code since we are all using the same data store
 
-            this.reset(); //reset the form
-            this.elements[0].focus(); //focus on the first field
+            console.log(data);
+            func(data); // call the function that was passed in on the data from the form
+
+            this.reset(); // reset the form
+            this.elements[0].focus(); // focus on the first field
         });
     };
- 
+
     FormHandler.prototype.addInputHandler = function (func) {
         console.log('Setting input hndler for form');
         this.$formElement.on('input', '[name="emailAddress"]', function (event) {
