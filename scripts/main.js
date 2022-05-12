@@ -11,7 +11,6 @@
     let DataStore = App.DataStore;
     let RemoteDataStore = App.RemoteDataStore;
     let FormHandler = App.FormHandler
-    let CheckList = App.CheckList;
     let Validation = App.Validation;
 
     //remote database where we store orders
@@ -23,16 +22,14 @@
 
     // find the form that is being submitted and create a FormHandler object
     let formHandler = new FormHandler(FORM_SELECTOR);
-    // MP find the checklist that is being updated and create a CheckList object
-     let checkList = new CheckList(CHECKLIST_SELECTOR);
 
     // MP when a checkbox is clicked, call "deliverOrder" on myTruck
-     checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
-    
+    checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
+
     // when the submit button is called, create the order and add a checkbox
     formHandler.addSubmitHandler(function (data) {
         myTruck.createOrder.call(myTruck, data);
-        checkList.addRow.call(checkList, data);
+
     });
     // add the emaill validator to the email input field
     formHandler.addInputHandler(Validation.isCompanyEmail);
