@@ -10,7 +10,7 @@
     let DataStore = App.DataStore;
     let RemoteDataStore = App.RemoteDataStore;
     let CheckList = App.CheckList;
-
+    console.log(App)
     // the remote database where we store orders
     let remoteDS = new RemoteDataStore(SERVER_URL);
 
