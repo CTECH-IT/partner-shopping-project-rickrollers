@@ -51,7 +51,7 @@
             });
             let description = keyboardOrder.amount + ' ';
             if (keyboardOrder.amount) {
-                description += keyboardOrder.name + ' ';
+                description += keyboardOrder.id + ' ';
             }
             description += keyboardOrder.amount + ', '
             description += ' (' + keyboardOrder.emailAddress + ')';
