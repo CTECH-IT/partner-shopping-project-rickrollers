@@ -3,7 +3,7 @@
 
     const FORM_SELECTOR = '[data-keyboard-order="form"]'
     const CHECKLIST_SELECTOR = '[data-keyboard-order="checklist"]';
-    const SERVER_URL = 'https://saturn.rochesterschools.org:8080/json';
+    const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json';
 
     //Let's make sure we only have on of these:
     let App = window.App;
@@ -23,8 +23,6 @@
     // find the form that is being submitted and create a FormHandler object
     let formHandler = new FormHandler(FORM_SELECTOR);
 
-    // MP when a checkbox is clicked, call "deliverOrder" on myTruck
-    checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
     // when the submit button is called, create the order and add a checkbox
     formHandler.addSubmitHandler(function (data) {
