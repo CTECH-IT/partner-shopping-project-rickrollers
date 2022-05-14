@@ -27,7 +27,7 @@
     // get all the data from the remote data store and put it in the truck and on the checklist
     remoteDS.getAll(function (orders) {
         Object.entries(orders).forEach((entry) => {
-            let validOrder = false; // check to see if it's mine
+            let validOrder = false ; // check to see if it's mine
             const [key, value] = entry;
             console.log(`got order: ** ${key}: ${value} **`);
             Object.entries(value).forEach((field) => {
