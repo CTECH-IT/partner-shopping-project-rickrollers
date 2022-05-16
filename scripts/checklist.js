@@ -49,12 +49,20 @@
                 type: 'checkbox',
                 value: keyboardOrder.emailAddress
             });
-            let description = keyboardOrder.amount + ' ';
-            if (keyboardOrder.amount) {
-                description += keyboardOrder.id + ' ';
+            let description = keyboardOrder.Amount + ' ';
+            if (keyboardOrder.Amount && keyboardOrder.HuntsmanMiniWhite) {
+                description += 'Huntsman Mini White ';
             }
-            description += keyboardOrder.amount + ', '
+            if (keyboardOrder.Amount && keyboardOrder.LogitechWireless) {
+                description += 'Logitech Wireless ';
+            }
+            if (keyboardOrder.Amount && keyboardOrder.RGBMechanicalKeyboardBlack) {
+                description += 'RGB Mechanical Keyboard Black ';
+            }
+            
+            description += keyboardOrder.Amount + ', '
             description += ' (' + keyboardOrder.emailAddress + ')';
+
             
 
 
