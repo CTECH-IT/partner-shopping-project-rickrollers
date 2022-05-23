@@ -59,8 +59,12 @@
             if (keyboardOrder.Amount && keyboardOrder.RGBMechanicalKeyboardBlack) {
                 description += 'RGB Mechanical Keyboard Black ';
             }
-            
-            description += keyboardOrder.Amount + ', '
+            if (keyboardOrder.Amount && keyboardOrder.sixtyMechanicalKeyboardPurple) {
+                description += '60% Purple Custom Mechanical Keyboard';
+            }
+            if(keyboardOrder.Amount && keyboardOrder.HuntsmanMiniBlack){
+                description += 'Huntsman Mini [Black]'
+            }
             description += ' (' + keyboardOrder.emailAddress + ')';
 
             
