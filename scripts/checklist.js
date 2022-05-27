@@ -66,12 +66,11 @@
                 description += 'Huntsman Mini [Black]'
             }
             if(keyboardOrder.amount&& keyboardOrder.LeagueOfLegendsBoard){
-                description += 'League of Legends Keyboard'}
+                description += 'League of Legends Keyboard'
             }
             description += ' (' + keyboardOrder.emailAddress + ')';
-
             
-
+        
 
             $label.append($checkbox);
             $label.append(description);
@@ -79,9 +78,8 @@
 
             this.$element = $div;
         }
+
     }
-
-
     App.CheckList = CheckList;
     window.App = App;
 })(window); 
