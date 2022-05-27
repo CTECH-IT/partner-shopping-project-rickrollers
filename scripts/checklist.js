@@ -51,22 +51,22 @@
             });
             let description = keyboardOrder.Amount + ' ';
             if (keyboardOrder.Amount && keyboardOrder.HuntsmanMiniWhite) {
-                description += 'Huntsman Mini White ';
+                description += 'Huntsman Mini White -$129.99 ';
             }
             if (keyboardOrder.Amount && keyboardOrder.LogitechWireless) {
-                description += 'Logitech Wireless ';
+                description += 'Logitech Wireless -$149.99';
             }
             if (keyboardOrder.Amount && keyboardOrder.RGBMechanicalKeyboardBlack) {
-                description += 'RGB Mechanical Keyboard Black ';
+                description += 'RGB Mechanical Keyboard Black -$109.99 ';
             }
             if (keyboardOrder.Amount && keyboardOrder.sixtyMechanicalKeyboardPurple) {
-                description += '60% Purple Custom Mechanical Keyboard';
+                description += '60% Purple Custom Mechanical Keyboard -$159.99';
             }
             if(keyboardOrder.Amount && keyboardOrder.HuntsmanMiniBlack){
-                description += 'Huntsman Mini [Black]'
+                description += 'Huntsman Mini [Black] -$129.99'
             }
             if(keyboardOrder.amount&& keyboardOrder.LeagueOfLegendsBoard){
-                description += 'League of Legends Keyboard'
+                description += 'League of Legends Keyboard -$129.99'
             }
             description += ' (' + keyboardOrder.emailAddress + ')';
             
