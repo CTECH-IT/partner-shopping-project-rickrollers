@@ -65,6 +65,9 @@
             if(keyboardOrder.Amount && keyboardOrder.HuntsmanMiniBlack){
                 description += 'Huntsman Mini [Black]'
             }
+            if(keyboardOrder.amount&& keyboardOrder.LeagueOfLegendsBoard){
+                description += 'League of Legends Keyboard'}
+            }
             description += ' (' + keyboardOrder.emailAddress + ')';
 
             
